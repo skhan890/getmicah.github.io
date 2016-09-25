@@ -1,14 +1,5 @@
 # getmicah.github.io
-My blog made with [jekyll](http://jekyllrb.com) and hosted with Github Pages.
-
-
-### Install
-
-* fork this repository
-* edit the `_config.yml` with your info
-* change the links in `_data/navigation.yml`
-* remove my posts from `_posts/`
-* rename your repo to ***your-username*.github.io**
+The layout of this blog was made with [jekyll](http://jekyllrb.com) by [Micah Cowell](https://github.com/getmicah) and hosted with Github Pages.
 
 ### License
 All this stuff is under the [MIT License](https://raw.githubusercontent.com/getmicah/getmicah.github.io/master/LICENSE)
