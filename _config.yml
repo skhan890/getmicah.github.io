@@ -3,6 +3,7 @@ permalink: /blog/:title
 
 
 # My variables
+title: Dispatches/أيفادات
 eng-name: Dispatches
 ara-name: <span class="arabic"> إيفادات</span>
 description: Futuristic web design
