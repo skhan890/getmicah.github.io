@@ -3,9 +3,9 @@ permalink: /blog/:title
 
 
 # My variables
-title: Dispatches/أيفادات
+name: Dispatches/أيفادات
 eng-name: Dispatches
-ara-name: <span class="arabic"> إيفادات</span>
+ara-name: إيفادات
 description: Futuristic web design
 google_verification: null
 

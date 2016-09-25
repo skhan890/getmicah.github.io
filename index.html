@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="header">
-    <h1>{{ site.eng-name | append: ' / ' | append: site.ara-name }}</h1>
+    <h1>{{ site.eng-name | append: ' / ' }}<span class="arabic">{{site.ara-name }}</span> </h1>
     <ul>
         {% for item in site.data.navigation %}
         <li>
