@@ -3,7 +3,8 @@ permalink: /blog/:title
 
 
 # My variables
-name: Micah Cowell
+eng-name: Dispatches
+ara-name: <span class="arabic"> إيفادات</span>
 description: Futuristic web design
 google_verification: null
 
