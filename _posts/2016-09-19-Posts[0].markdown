@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Posts[0]"
+date:   2016-09-19 15:00:00 -0400
+---
+The history of the zero spans mathmaticians, civilizations, and time. Seeing as the this is my first blog post, I thought
+it was only appropriate to reflect a bit on the meaning of the number zero and why we sometimes begin counting from it. As the animation 
+[here](http://www.slate.com/articles/video/video/2016/06/an_animated_history_of_the_number_zero_video.html) explains, it's history is 
+long and it's role is undeniabliy core to our lives today. I got to know the number zero in two forms: 
+- 0: the [Western Arabic numeral](https://en.wikipedia.org/wiki/Arabic_numerals)
+- <span class="post-arabic__content"> ٠</span>: the [Eastern Arabic numeral](https://en.wikipedia.org/wiki/Eastern_Arabic_numerals)
+
+## Zero-Based Numbering
+I learned counting by starting at one. The existance of the material was that which prompted a symbolic representation of it's being. 
+One apple, two apples, three apples. Zero apples weren't important because zero apples weren't really apples, they were vacious.
+
+## Memory
+
+## Thoughts
+
+---
+
+## References

@@ -1,6 +1,0 @@
----
-layout: post
-title:  "Post 0"
-date:   2016-09-19 15:00:00 -0400
----
-I begin at the beginning. Before all of which begins to count. From the void, into the specular.
