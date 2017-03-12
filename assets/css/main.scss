@@ -191,10 +191,11 @@ ul {
 		img {
 			margin-top: 10px;
 			margin-bottom: 10px;
-			@media screen and (max-width: $br) {
-				width: 100%;
+			width: 100%
+			/* @media screen and (max-width: $br) {
+				width: 800px;
 				margin: auto;
-			}
+			}*/
 		}
 		code {
 			padding: 3px;
