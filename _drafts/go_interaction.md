@@ -31,7 +31,9 @@ The two-axis touchpad was another option. Users are used to scrolling with their
 Our solution was to base it relative to your perspective. This means moving your finger left-to-right would move the object along the X-axis of a flat plane between you and the object (left-to-right of your perspective). Moving your finger on the up and down the Y-axis of the touchpad would move it back and forward from your perspective. We found that moving object left and right wasn't really useful. Seeing as your stuck in one position with a 3DOF headsets, moving it left and right relative to one's head didn't add to the ability of user's to better observe the 3D models. On the other hand, bringing it closer and further away provided the ability to better observe 3D models upclose or push them further away for a more macro perspective.
 
 ## Rotate
+The main objective of rotating a model is observing it's structure from multiple perspectives. Remember that spatial reasoning tests where you were asked to imagine the other side of a geometric shape. You don't actually have to do that when you're able to rotate a model in 3D space. While this spatial reasoning tests where useful in evaluating how well you could imagine the other side of geometry, our users needed to be able to observe these perspectives and evaluate their state in order to draw conclusions.
 
+Rotating around the 3 axes is usually the ideal in 3D visualization software usually implemented through widget based or value manipulation interaction techniques. Our 3DOF controller was clunky at best when attempting those approaches. By building on our translation implementation, we mapped the two-axis touchpad to rotating around the model's local x-axis and around the world's y-axis.
 ## Scale
 
 ## Pointer Grab
