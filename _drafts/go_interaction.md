@@ -54,6 +54,10 @@ This implementation isn't too difficult. From the touchpad we get a 2D vector of
 
 ## Manipulation Mode Selection
 
+All the manipulation implementations discussed above cannot exist as possible actions by the user at once. Recall that we have only one controller with one touchpad. Attempting to predict what the user is attempting to achieve using data collected from initial touches is hard, especially when there's overlap with the manipulation mappings. Recall that the fishing reel technique requires users to scroll along the y-axis of the controller to bring the selected model closer or further back. That same mapping, y-axis scrolling should also allow the user to rotate the model around it's x-axis as mapped in the rotation interaction. How does one allow for these capabilities to exist without overwhelming the user and allow the user to acureatly act on their intentions? Constrain them.
+
+Instead of having all these functions accessible immedielty and at any point, force the user to choose between different manipulation modes. This limits their degree of freedom when using the touchpad but allows them to clearly identify which core manipulation they aim to use. To acheive this we mapping the touchpad's press functionality to cycle between the different manipulation modes. Feedback is given to the user by identifing which mode their in using representative icons.
+
 ## Pointer Grab
 
 ## Things to improve
