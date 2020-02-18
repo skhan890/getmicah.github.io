@@ -31,6 +31,8 @@ The two-axis touchpad was another option. Users are used to scrolling with their
 Our solution was to base it relative to your perspective. This means moving your finger left-to-right would move the object along the X-axis of a flat plane between you and the object (left-to-right of your perspective). Moving your finger on the up and down the Y-axis of the touchpad would move it back and forward from your perspective. We found that moving object left and right wasn't really useful. Seeing as your stuck in one position with a 3DOF headset, moving it left and right relative to one's head didn't add to the ability of user's to better observe the 3D models. On the other hand, bringing it closer and further away provided the ability to better observe 3D models upclose or push them further away for a more macro perspective.
 
 ## Rotate
+
+picking fruits at market
 The main objective of rotating a model is observing it's structure from multiple perspectives. Remember that spatial reasoning tests where you were asked to imagine the other side of a geometric shape. You don't actually have to do that when you're able to rotate a model in 3D space. While this spatial reasoning tests where useful in evaluating how well you could imagine the other side of geometry, our users needed to be able to observe these perspectives and evaluate their state in order to draw conclusions.
 
 Rotating around the 3 axes is usually the ideal in 3D visualization software usually implemented through widget based or value manipulation interaction techniques. Our 3DOF controller was clunky at best when attempting those approaches. By building on our translation implementation, we mapped the two-axis touchpad to rotating around world's x-axis and y-axis. We reversed the mapping by associating the x-axis on the touchpad with the world's y-axis and the y-axis on the touchpad to the world's x-axis.
@@ -39,7 +41,18 @@ Some part of the implementation above worked really well. From the user's perspe
 
 A final addition to the rotation implementation was locking the rotation along a specific axis. This wasn't an idea I was confident about but rotating both axis at the same time felt convoluted in our implementation. The solution, limit the user's rotation DOF even further to allow for more precise coherent rotations. To do this we measure where the user's thumb lands over 3 frames and find along which axis the displacement is greater. This becomes their locked axis of rotation and allows them the ability to precisely rotate the object along that axis until their thumb leaves the touchpad and interaction state returns to it's original state.
 
+mention virtual sphere
+
 ## Scale
+You'd need to be able to scale objects in the world around you. You do it everyday to books, screens, a lost dollar on the ground. In those cases you're bring objects closer to your eyes. This makes the details on those objects clearer allowing for a closer inspection. This common behavior is also very common in digital design and dentistry. More formally defined as the task of changing the size of an object (1), this task is fundamental to the proper manipulation and comprehesion of 3D models.
+
+For the scale task building on the touch-pad mapping techniques from the previous two implementations made sense. At the same time we wanted to implement a technique that user's could possibly already have a grasp on. Mapping x-axis or y-axis changes on the touch-pad wasn't a good affordance. Think about it, why would swiping up-down or left-right cause a change in volume. Seeing as this task doesn't have metaphors in the real world, made it harder. Scaling isn't part of our daily lives. Most things we interact with on a day to day basis aren't scalable or would require us to remanufactor at a difference size or scale factor.
+
+The way we approached this was by attempting to find metaphors in relation to what effect scaling object has on 3D models. Expansion, compression, spread, suppress were all words that defined what happens when you scale a 3D model up or down. We experimented with a number of axis-based mapping but none felt good. It occured us that volume, as in volume of a rigid body, was also what was changing. What immedietly came to mind was the volume click wheel on those Ipods from the 2000s. It controlled volume and also menu navigation but the connotations with volume were strong in my head.
+
+This implementation isn't too difficult. From the touchpad we get a 2D vector of the location of a touching finger. This represents the displacement on the x and y axes from the center of the touchpad. We then use the angular displacement from frame to frame and map that to some displacement in the scale of the selected object. As the user scrolls in a circular manner around the touchpad, the size of the object grows or shrinks. We used a clock metaphor where moving clock-wise increases the scale of the object and moving counter clock-wise decreases it. This worked well. The sense of growing an object or shrinking mapped well with the metaphor of increasing volume on a Ipod.
+
+## Manipulation Mode Selection
 
 ## Pointer Grab
 
@@ -52,4 +65,5 @@ A final addition to the rotation implementation was locking the rotation along a
 ## References
 
 1: (Doug A. Bowman, Ernst Kruijff, Joseph J. LaViola, and Ivan Poupyrev. 2004. 3D User Interfaces: Theory and Practice. Addison Wesley Longman Publishing Co., Inc., USA.)
+
 2: (Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301)
