@@ -60,6 +60,14 @@ Instead of having all these functions accessible immediately and at any point, f
 
 ## Pointer Grab
 
+You might have noticed that when dealing with one model, the implementations above give you a sense of control. As mentioned in the selection section, group manipulation was the goal. Manipulating the 3D models in groups also worked well as we group their transforms into a parent transform and applied the mappings from each manipulation technique above to the parent transform.
+
+Nonetheless, users still felt that the workflow for manipulating a model relative to another was slow and clunky. Independent observations and manipulations regarding each model by itself was fine but when the goal was to position models relative to each other, the task became harder.
+
+As a solution, we build on affordances from common WIMP interfaces. In many WIMP interfaces pointers are capable of dragging items from one location to another. The action usually involves holding the mouse button down when the pointer is above a movable object. These objects are usually highlighted to identify their interaction status. A user will then move the mouse dragging with it the item it was pointing at. Once the user lifts their finger off of the button, the object is released in that position and the pointer is free to move on its own again. Funny describing something we do all the time in formal steps.
+
+We use these same steps to provide a drag mechanism. When our ray-cast pointer hovers over a 3D model, the model highlights identifying it's in a hover state. The user can then hold down the trigger button and move the pointer to another location in space. The model will follow the pointers end at a set radius. This radius is set initially when the pointer makes contact with the model. This allows for quick placement of models relative to one another and relative to a set radius around the user.
+
 ## Things to improve
 
 - Feedback is limited
