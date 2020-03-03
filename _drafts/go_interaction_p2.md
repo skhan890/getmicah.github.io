@@ -38,6 +38,9 @@ Throughout the development process, constraints on user interaction remained the
 
 One thing to note is that the main interaction metaphor used in our implementation, ray-cast pointer, is clearly an extension of the pointer in WIMP interfaces. While the hope is that with more immersive environments, users will be introduced with more "natural" forms of interaction, the current state of immersive VR applications tend to build on user experience and the affordances from 2D WIMP interfaces. It's yet to be seen if hand or speech interfaces will replace pointer based ones in immersive environments but building on the long legacy of 2D based WIMP interfaces seems like a logical first step. I think this implementation does a good job at that while dealing with the limitations of 3DOF controllers.
 
+Constraints not clear and need to be emphasized using feedback and signifiers.
+Bounding box does not provide enough granular interaction.
+
 ## References
 
 1: (Doug A. Bowman, Ernst Kruijff, Joseph J. LaViola, and Ivan Poupyrev. 2004. 3D User Interfaces: Theory and Practice. Addison Wesley Longman Publishing Co., Inc., USA.)
