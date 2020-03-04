@@ -14,7 +14,8 @@ One option was the Oculus Go which had come out some months prior. I had gotten 
 
 I sought inspiration from other Go apps. There was heavy usage of ray-cast pointer techniques which was common with 3DOF controllers but most of these applications left me wishing for more. I finally came across Virtual Virtual Reality (VVR) which I felt allowed me to accurately control objects around me with one controller. It also used ray-cast pointer as it's main interaction technique but added gravity to many of the objects in the space around you. This gave the impression of each of these objects having weight and requiring your controller to fight off gravity to be able to lift them. Another characteristic was limiting manipulation to a grab mechanic that allowed you to move the object around the user in a set radius. You were also allowed to change the radius by swiping on the Y axis of the touchpad while an object is grabbed. This was really powerful and allowed accurate placement of 3D objects in the space around me; the game's main mechanic. I had hope.
 
-![](..\assets\gif\vvr.gif)
+![](..\assets\gif\vvr.gif#half)
+*Grab Mechanic in Virtual Virtual Reality*
 
 # Design & Implementation
 
@@ -22,7 +23,7 @@ The 3DOF Go controller had one main trigger button, a back button, a reserved "O
 
 As mentioned above, a common approach to solving this issue is using the ray-cast pointer interaction technique. This technique's main objective is extending a controller's reach by casting a ray into space that interacts with objects and surfaces. The intersection of the ray and an interactable object is signified using a cursor. This provides the user with feedback regarding where exactly they're pointing to. Ray-cast pointing is common within a lot of exiting VR applications and many users recognize it's affordances that support it's usage, such as ending the pointer with a cursor similar to that in WIMP-based interfaces.
 
-![](..\assets\img\go_interaction\oculus_go_controller.png)
+![](..\assets\img\go_interaction\oculus_go_controller.png#half)
 
 ## *Select*
 
@@ -30,13 +31,13 @@ Selection is fundamental to manipulation interactions. Identifying which item a 
 
 In this implementation, when the pointer intersects with an interactable 3D model, the model changes color to light green to signify it's selectability; a "on hover" state. The location at which the ray intersects with the model's bounding box is signaled by a round cursor object. To select an object, a user points towards it and clicks the main trigger button on the controller. The main feedback here was changing the 3D model's color to light blue. This identifies it is currently in our selected set.
 
-![](..\assets\gif\hover.gif)
+![](..\assets\gif\hover.gif#half)
+*On Hover Feedback*
 
 Initially, our goal to support only single object manipulation but we found that with single object selection, our users' ability to modify their 3D models in relation to one another quickly deteriorated. Group selection was a must. Our final implementation was similar to holding CTRL/CMD and using a mouse and it's corresponding cursor to select multiple objects. As group selection constituted a large portion of how users interacted with 3D models, we chose to remove the need for a button combination for group selection and allowed for direct group selection using the trigger button.
 
-![](..\assets\gif\select.gif)
-
-*group select
+![](..\assets\gif\select.gif#half)
+*Selection*
 
 ## *Translate*
 
@@ -48,7 +49,8 @@ The two-axis touchpad was another option. Users are used to scrolling with their
 
 Our solution was to base it relative to your perspective. This means moving your finger left-to-right would move the object along the x-axis of a parallel, flat plane between you and the object (left-to-right of your perspective). Moving your finger up and down on the y-axis of the touchpad would move it back and forward from your perspective.
 
-*animation for above
+![](..\assets\gif\translate.gif#half)
+*Fishing Reel Translation*
 
 We found that moving an object left and right wasn't really useful. Seeing as you're stuck in one position with a 3DOF headset, moving it left and right relative to one's head didn't add to one's ability to better observe the 3D models. On the other hand, bringing it closer and further away provided the ability to better observe 3D models up close or push them further away for a more macro perspective. This is similar to the VVR implementation and turns out to be a well established interaction metaphor called "Fishing Reel".(2)
 
@@ -68,7 +70,8 @@ Some part of the implementation above worked really well. From the user's perspe
 
 A final addition to the rotation implementation was locking the rotation along a specific axis. This wasn't an idea I was confident about but rotating both axes at the same time felt convoluted. The solution, limit the user's rotation DOF even further to allow for more precise coherent rotations. To do this we measure where the user's thumb lands over 3 frames and find along which axis the displacement is greater. This becomes their locked axis of rotation and allows the user the ability to precisely rotate the object along that axis until their thumb leaves the touchpad and the interaction state returns to a default state.
 
-*correct rotation mapping
+![](..\assets\gif\rotate.gif#half)
+*Rotation*
 
 ## References
 
