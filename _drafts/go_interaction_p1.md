@@ -1,29 +1,30 @@
 ---
 layout: post
-title:  "Mapping Canonical Manipulation Tasks to a 3DOF Virtual Reality Controller Pt.1"
+title:  "Building Efficient Manipulation Interactions for 3DOF Virtual Reality Controllers Pt.1"
 date:   2020-02-20 21:00:00 -0400
 ---
 
 # User Adoption
 
-A while back I worked for a company that focused on developing VR tools for university level, dental educators and students. We reduced the main needs for our users to core manipulation functions with their scanned 3D models. That means translation, rotation, and scale. Our tool took loads of inspiration from great VR applications like Tilt Brush, Quill, Poly. We had a good implementation running on desktop VR headsets (Rift, Vive) but we hit a barrier when it came to user adoption. Educators were willing invest in one or two desktop headsets but no one was willing to buy a hundred or so desktop VR headsets in addition to the hundred or so dedicated rigs to drive them.
+A while back I worked with a team of folks to develop VR tools for university level, dental educators and students. We reduced the main needs for the users to core manipulation functions with scanned 3D models. That means translation, rotation, and scale. Our tool took loads of inspiration from great VR applications like Tilt Brush, Quill, Poly. We had a good implementation running on desktop VR headsets (Rift, Vive) but we hit a barrier when it came to growing user adoption. Educators were willing to invest in one or two desktop headsets but no one was willing to buy a hundred or so desktop VR headsets in addition to the hundred or so dedicated rigs to drive them.
 
 To scale our tool to the classroom, more affordable, mobile headsets were the way to go. We had previously tried low-end phone based VR like Cardboard but performance on devices varied and for the most part, nausea ensued, especially when batteries ran low. Students assumed others had an edge over them because they had better phones or had made sure to bring their chargers in with them. For the most part, that was true.
 
 One option was the Oculus Go which had come out some months prior. I had gotten one and used it for a bit but didn't believe it could be used for more than media consumption. It also came with a 3DOF controller that was a lot more limited when compared with the controllers on the Rift or Vive. Our current interaction techniques were out of the question as they heavily relied on having a 6DOF controller.
 
-I sought inspiration from other Go apps. There was heavy usage of ray-cast pointer techniques which was common with 3DOF controllers but most of these applications left me wishing for more. I finally came across Virtual Virtual Reality (VVR) which I felt allowed me to accurately control objects around me with one controller. It also used ray-cast pointer as it's main interaction technique but added gravity to many of the objects in the space around you. This gave the impression of each of these objects having weight and requiring your controller to fight off gravity to be able to lift them. Another characteristic was limiting manipulation to a grab mechanic that allowed you to move the object around the user in a set radius. You were also allowed to change the radius by swiping on the Y axis of the touchpad while an object is grabbed. This was really powerful and allowed accurate placement of 3D objects in the space around me; the game's main mechanic. I had hope.
+I sought inspiration from other Go apps. There was heavy usage of ray-cast pointer techniques which was common with 3DOF controllers but most of these applications left me wishing for more. I finally came across Virtual Virtual Reality (VVR) which I felt allowed me to accurately control objects around me with one controller. It also used ray-cast pointer as it's main interaction technique but added gravity to many of the objects in the space around you. This gave the impression of each of these objects having weight and requiring your controller to fight off gravity to be able to lift them. Another characteristic was limiting manipulation to a grab mechanic that allowed you to move the object around the user in a set radius. You were also allowed to change the radius by swiping on the Y axis of the touchpad while an object is grabbed. This was really powerful and allowed accurate placement of 3D objects in the space around me; one of the game's main mechanics. I had hope.
 
 ![](..\assets\gif\vvr.gif#half)
 *Grab Mechanic in Virtual Virtual Reality*
 
 # Design & Implementation
 
-The 3DOF Go controller had one main trigger button, a back button, a reserved "Oculus" button, and a two-axis, clickable touchpad. That's all we had to play with. The main challenge for working with a 3DOF controller is the inability to directly reach out and interact with the environment. The controller is able to map to it's proper rotation in the real world but not it's actually position. This is like trying to reach out into the world but having your hand stuck in one place.
+The 3DOF Go controller had one main trigger button, a back button, a reserved "Oculus" button, and a two-axis, clickable touchpad. That's all we had to play with. The main challenge for working with a 3DOF controller is the inability to directly reach out and interact with the environment. The controller is able to map to it's proper rotation in the real world but unlike 6DOF controllers, it's position is not tracked. This is like trying to reach out into the world but having your hand stuck in one place.
 
 As mentioned above, a common approach to solving this issue is using the ray-cast pointer interaction technique. This technique's main objective is extending a controller's reach by casting a ray into space that interacts with objects and surfaces. The intersection of the ray and an interactable object is signified using a cursor. This provides the user with feedback regarding where exactly they're pointing to. Ray-cast pointing is common within a lot of exiting VR applications and many users recognize it's affordances that support it's usage, such as ending the pointer with a cursor similar to that in WIMP-based interfaces.
 
 ![](..\assets\img\go_interaction\oculus_go_controller.png#half)
+*Oculus Go Controller Diagram*
 
 ## *Select*
 
@@ -75,6 +76,6 @@ A final addition to the rotation implementation was locking the rotation along a
 
 ## References
 
-1: (Doug A. Bowman, Ernst Kruijff, Joseph J. LaViola, and Ivan Poupyrev. 2004. 3D User Interfaces: Theory and Practice. Addison Wesley Longman Publishing Co., Inc., USA.)
+1: (Joseph J. LaViola, Ernst Kruijff, Ryan P. McMahan, Doug A. Bowman, Ivan Poupyrev. 2017. 3D User Interfaces: Theory and Practice 2nd Edition. Addison Wesley Longman Publishing Co., Inc., USA.)
 
 2: (Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301)
