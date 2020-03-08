@@ -2,6 +2,7 @@
 layout: post
 title:  "Building Efficient Manipulation Interactions for 3DOF Virtual Reality Controllers Pt.1"
 date:   2020-02-09 09:00:00 -0400
+description: The design and implementation of 3DOF manipulation interaction techniques on the Oculus Go.
 ---
 
 # User Adoption
@@ -82,7 +83,7 @@ private void Rotate() {
     Vector3 objectToHeadVector = selectedObject.position - head.position;
     Vector3 perspectiveRightAxis = Vector3.cross(objectToHeadVector.normalized, Vector3.up);
 
-    selectedObject.Rotate(perspectiveRightAxis, touchpadXAxisDisplacement, Space.World);
+    selectedObject.Rotate(perspectiveRightAxis, touchpadYAxisDisplacement, Space.World);
 }
 ```
 *Rotating around user perspective x-axis in Unity C#*
@@ -98,6 +99,6 @@ In the next post, I'll discuss the final core manipulation task, scale, in addit
 
 # References
 
-1: (Joseph J. LaViola, Ernst Kruijff, Ryan P. McMahan, Doug A. Bowman, Ivan Poupyrev. 2017. 3D User Interfaces: Theory and Practice 2nd Edition. Addison Wesley Longman Publishing Co., Inc., USA.)
+1: Joseph J. LaViola, Ernst Kruijff, Ryan P. McMahan, Doug A. Bowman, Ivan Poupyrev. 2017. 3D User Interfaces: Theory and Practice 2nd Edition. Addison Wesley Longman Publishing Co., Inc., USA.
 
-2: (Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301)
+2: Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301
