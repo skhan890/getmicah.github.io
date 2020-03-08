@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mirza">
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+    {% seo %}
 </head>
 
 <body>
@@ -29,7 +31,9 @@
     <div class="wrapper">
         {{ content }}
     </div>
-
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
 </body>
 
 </html>
