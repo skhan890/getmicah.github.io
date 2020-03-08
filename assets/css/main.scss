@@ -3,6 +3,7 @@
 
 @import "reset";
 @import "config";
+@import "native";
 
 body {
 	color: $color-black;
@@ -200,6 +201,10 @@ ul {
 			width: 50%;
 			margin-top: 30px;
 		}
+		img[src*="#quarter"] {
+			width: 25%;
+			margin-top: 30px;
+		}
 		img + em {
 			text-align: center;
 			display: block;
@@ -212,15 +217,19 @@ ul {
 			border-radius: 3px;
 			background: $color-grey;
 		}
+		div + p em {
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.highlight {
 			margin: 10px;
 			margin-bottom: 15px;
 			padding: 10px;
 			line-height: 1.5;
 			border-radius: 3px;
-			background: $color-black;
 			code {
-				color: $color-code;
 				background: none;
 			}
 		}
