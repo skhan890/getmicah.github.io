@@ -73,9 +73,6 @@ The main objective of rotating a 3D model is observing its structure from multip
 
 Rotating around the 3 axes is usually the ideal in 3D visualization software, usually implemented through indirect manipulation or widget-based techniques. Our 3DOF controller was clunky at best when attempting those approaches. By building on our translation implementation, we mapped the two-axis touchpad to rotate around world's x-axis and y-axis. We reversed the mapping by associating the x-axis on the touchpad with the world's y-axis and the y-axis on the touchpad to the world's x-axis.
 
-![](..\assets\gif\rotation_mapping.gif#quarter alt="Touchpad Rotation Mapping Gif")
-*Touchpad Rotation Mapping*
-
 Some part of the implementation above worked really well. From the user's perspective, moving your thumb along the x-axis of the controller's touchpad maps well with the model's rotation around the world's y-axis. On the other hand, rotating around the world's x-axis was confusing. From the user's perspective, if the camera's local x-axis aligned with the world's axis, it was great. The millisecond those two stopped aligning, the manipulation stopped making sense. From the user's perspective, moving their finger along the y-axis of the touchpad resulted in the model's rotation around an arbitrary axis. This was fixed by finding the vector between the model's position in space and the user's head position. We normalize that and then find the cross product between it and the world's up vector. This gives us a vector that's perpendicular to those two resulting in a vector that always points to the right of the displacement vector separating the model's position and the user's head. This works and provides for coherent rotation from the user's perspective.
 
 ```cs
@@ -92,6 +89,9 @@ A final addition to the rotation implementation was locking the rotation along a
 
 ![](..\assets\gif\rotate.gif#half alt="Rotation Gif")
 *Rotation*
+
+![](..\assets\gif\rotation_mapping.gif#quarter alt="Touchpad Rotation Mapping Gif")
+*Touchpad Rotation Mapping*
 
 # Part Two
 
