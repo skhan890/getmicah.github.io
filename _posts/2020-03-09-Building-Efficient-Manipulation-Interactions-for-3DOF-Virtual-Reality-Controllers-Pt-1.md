@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Building Efficient Manipulation Interactions for 3DOF Virtual Reality Controllers Pt.1"
+author: Talal Alothman
 date:   2020-03-09 09:00:00 -0400
 description: The design and implementation of 3DOF manipulation interaction techniques on the Oculus Go.
+image: ..\assets\gif\rotation_mapping.gif
 ---
 
 # User Adoption
