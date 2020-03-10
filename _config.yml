@@ -7,7 +7,6 @@ name: Dispatches/أيفادات
 eng-name: Dispatches
 ara-name: إيفادات
 description: Personal blog about XR and other things. I write in English, Arabic, C#, C++.
-google_verification: null
 
 
 # File management
@@ -17,6 +16,7 @@ exclude: ["README.md", "LICENSE"]
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 
 # Sass
@@ -31,3 +31,9 @@ kramdown:
   input: GFM
   hard_wrap: false
 highlighter: rouge
+
+# SEO
+twitter:
+  username: stenfeio
+  card: summary
+google_site_verification: vX7R4Cr4bb8x2WaAIhC_J1IMf_fyn3AsjqH1RST0N08
