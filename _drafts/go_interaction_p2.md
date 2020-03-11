@@ -1,8 +1,15 @@
 ---
 layout: post
-title:  "Mapping Canonical Manipulation Tasks to a 3DOF Virtual Reality Controller"
-date:   2020-02-20 21:00:00 -0400
+title:  "Building Efficient Manipulation Interactions for 3DOF Virtual Reality Controllers Pt.2"
+author: Talal Alothman
+date:   2020-03-16 09:00:00 -0400
+description: Developing 3DOF manipulation is hard. This post proposes an efficient, user friendly implementation as a solution.
+image: 
 ---
+
+## Transition
+
+In part one, I discussed some of the challenges and solutions for two selection, translation, and rotation. In this post, I will further elaborate on the scale interaction in addition to methods of transitioning between the different interaction modes.
 
 ## Scale
 
@@ -43,6 +50,6 @@ Bounding box does not provide enough granular interaction.
 
 ## References
 
-1: (Doug A. Bowman, Ernst Kruijff, Joseph J. LaViola, and Ivan Poupyrev. 2004. 3D User Interfaces: Theory and Practice. Addison Wesley Longman Publishing Co., Inc., USA.)
+1: Joseph J. LaViola, Ernst Kruijff, Ryan P. McMahan, Doug A. Bowman, Ivan Poupyrev. 2017. 3D User Interfaces: Theory and Practice 2nd Edition. Addison Wesley Longman Publishing Co., Inc., USA.
 
-2: (Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301)
+2: Doug A. Bowman and Larry F. Hodges. 1997. An evaluation of techniques for grabbing and manipulating remote objects in immersive virtual environments. In Proceedings of the 1997 symposium on Interactive 3D graphics (I3D ’97). Association for Computing Machinery, New York, NY, USA, 35–ff. DOI:https://doi.org/10.1145/253284.253301
