@@ -21,11 +21,20 @@ The way we approached this was by attempting to find metaphors in relation to wh
 
 This implementation isn't too difficult. From the touchpad we get a 2D vector of the location of a touching finger. This represents the displacement on the x and y axes from the center of the touchpad. We then use the angular displacement from frame to frame and map that to some displacement in the scale of the selected object. As the user scrolls in a circular manner around the touchpad, the size of the object grows or shrinks. We used a clock metaphor where moving clock-wise increases the scale of the object and moving counter clock-wise decreases it. This worked well. The sense of growing an object or shrinking mapped well with the metaphor of increasing volume on a Ipod.
 
-## Manipulation Mode Selection
+![](..\assets\gif\scale.gif#half alt="Scaling Gif")
+*Scaling*
+
+![](..\assets\gif\scale_mapping.gif#quarter alt="Scaling Mapping Gif")
+*Scale Mapping*
+
+## Manipulation Mode Cycling
 
 All the manipulation implementations discussed above cannot exist as possible actions by the user at once. Recall that we have only one controller with one touchpad. Attempting to predict what the user is attempting to achieve using data collected from initial touches is hard, especially when there's overlap with the manipulation mappings. Recall that the fishing reel technique requires users to scroll along the y-axis of the controller to bring the selected model closer or further back. That same mapping, y-axis scrolling should also allow the user to rotate the model around it's x-axis as mapped in the rotation interaction. How does one allow for these capabilities to exist without overwhelming the user and allow the user to accurately act on their intentions? Constrain them.
 
 Instead of having all these functions accessible immediately and at any point, force the user to choose between different manipulation modes. This limits their degree of freedom when using the touchpad but allows them to clearly identify which core manipulation they aim to use. To achieve this we mapping the touchpad's press functionality to cycle between the different manipulation modes. Feedback is given to the user by identifying which mode their in using representative icons. These icons function as our visual signifiers informing the user which manipulation state they're in.
+
+![](..\assets\gif\mode_change.gif#quarter alt="Mode Cycling Gif")
+*Manipulation Mode Cycling*
 
 ## Pointer Grab
 
