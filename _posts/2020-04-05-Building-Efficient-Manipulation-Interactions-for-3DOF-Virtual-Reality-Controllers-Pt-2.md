@@ -2,7 +2,7 @@
 layout: post
 title:  "Building Efficient Manipulation Interactions for 3DOF Virtual Reality Controllers Pt.2"
 author: Talal Alothman
-date:   2020-04-04 12:00:00 -0400
+date:   2020-04-05 12:00:00 -0400
 description: Developing 3DOF manipulation is hard. This post proposes an efficient, user friendly implementation as a solution.
 image: ../assets/gif/scale.gif
 ---
