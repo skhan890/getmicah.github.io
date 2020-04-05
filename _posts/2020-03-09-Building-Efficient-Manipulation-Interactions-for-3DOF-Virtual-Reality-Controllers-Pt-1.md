@@ -97,7 +97,7 @@ A final addition to the rotation implementation was locking the rotation along a
 
 # Part Two
 
-In the next post, I'll discuss the final core manipulation task of scaling and how we allowed for the overlapping usage of the touchpad across the three manipulation tasks. Additionally, I'll discuss which types of feedback worked best with our implementation.
+[In the next post]({{ site.baseurl }}{% post_url 2020-04-05-Building-Efficient-Manipulation-Interactions-for-3DOF-Virtual-Reality-Controllers-Pt-2 %}), I'll discuss the final core manipulation task of scaling and how we allowed for the overlapping usage of the touchpad across the three manipulation tasks. Additionally, I'll discuss which types of feedback worked best with our implementation.
 
 # References
 
