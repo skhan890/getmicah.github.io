@@ -1,0 +1,15 @@
+---
+layout: projects
+---
+
+<div class="projects__content">
+    <h1>Projects:</h1>
+    <ul>
+        {% assign sorted = site.projects | sort: 'date' | reverse %}
+        {% for project in sorted %}
+        <li>
+            {{project.content}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,8 +1,14 @@
-- title: about
-  url: /me
+- title: projects
+  url: /projects
+
+- title: twitter
+  url: https://twitter.com/talalhalothman 
 
 - title: github
   url: https://github.com/talothman
+
+- title: about
+  url: /me
 
 #- title: teaching
 # url: /teaching
