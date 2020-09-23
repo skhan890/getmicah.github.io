@@ -11,6 +11,7 @@ body {
 	font-family: 'Inconsolata', ;
 	font-size: 100%;
 	font-weight: 400;
+	font-display: swap;
 }
 h1 {
 	margin-bottom: 5px;
@@ -74,6 +75,7 @@ ul {
 		.arabic{
 			font-size: 1.25em;
 			font-family: 'Mirza', cursive;
+			font-display: swap;
 		}
 	}
 	ul {
@@ -289,6 +291,7 @@ ul {
 .post-arabic {
 	padding-bottom: 30px;
 	font-family: 'Mirza', cursive;
+	font-display: swap;
 	direction: rtl;
 	&__back {
 		a {
@@ -435,12 +438,14 @@ ul {
 		margin-bottom: 10px;
 		font-family: 'Mirza', cursive;
 		direction: rtl;
+		font-display: swap;
 	}
 	&__content {
 		font-family: 'Mirza', cursive;
 		direction: rtl;
 		margin-top: 20px;
 		font-size: 1.4em;
+		font-display: swap;
 		h1 {
 			font-size: 1.8em;
 			font-style: italic;
