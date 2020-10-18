@@ -6,8 +6,8 @@ permalink: /blog/:title
 name: Dispatches/أيفادات
 eng-name: Dispatches
 ara-name: إيفادات
-description: Personal blog about XR and other things. I write in English, Arabic, C#, C++.
-
+description: Talal Alothman. Talking about VR AR XR Spatial User Interfaces!
+author: Talal Alothman
 
 # File management
 include: [".htaccess"]
@@ -34,7 +34,7 @@ highlighter: rouge
 
 # SEO
 twitter:
-  username: stenfeio
+  username: talalhalothman
   card: summary
 google_site_verification: vX7R4Cr4bb8x2WaAIhC_J1IMf_fyn3AsjqH1RST0N08
 
