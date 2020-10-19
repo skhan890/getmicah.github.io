@@ -4,7 +4,7 @@ title:  "Exploring Hand Tracked Interaction for Holographic Displays"
 author: Talal Alothman
 date:   2020-10-18 12:00:00 -0400
 description: Holographic Displays like the Looking Glass can use hand tracking for interaction but it's not that straight forward.
-image: ..\assets\videos\hand_tracked_holographic_display\snapshot.png
+image: ../assets/videos/hand_tracked_holographic_display/snapshot.png
 ---
 
 ## TL;DR
