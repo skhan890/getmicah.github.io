@@ -18,12 +18,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-
 # Sass
 sass:
   style: :compressed
   sass_dir: _sass
-
 
 # Markdown
 markdown: kramdown
@@ -36,7 +34,6 @@ highlighter: rouge
 twitter:
   username: talalhalothman
   card: summary
-google_site_verification: vX7R4Cr4bb8x2WaAIhC_J1IMf_fyn3AsjqH1RST0N08
 
 # Sitemap
 url: https://talothman.github.io
