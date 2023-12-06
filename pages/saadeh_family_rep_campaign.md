@@ -42,7 +42,7 @@ Sincerely,
           const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
           // Open the mailto link in a new tab
-          window.open(mailtoLink, '_blank');
+          window.location.href = mailtoLink
         }
       });
     } catch (error) {
