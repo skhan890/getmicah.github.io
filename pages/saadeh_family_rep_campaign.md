@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Saadeh
+layout: default_no_seo
+title: Saadeh Family Representative Email Campaign
 permalink: /saadeh/
 ---
 
@@ -46,12 +46,16 @@ Sincerely,
         }
       });
     } catch (error) {
-      console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error);
+        var x = document.getElementById("hiddenText");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        }
     }
   }
 </script>
 
-## Saadeh Family Support Representative Email Campaign
+## Saadeh Family Representative Email Campaign
 
 This form will generate a strongly worded letter to the representative of your zipcode. It will open in your email client and you have the ability to modify the content of the email before sending.
 
@@ -69,3 +73,21 @@ This form will generate a strongly worded letter to the representative of your z
 </div>
 
 Learn more about the issue: [https://www.fox2detroit.com/video/1376036](https://www.fox2detroit.com/video/1376036).
+
+<div id="hiddenText" style="display: none;">
+
+<h2 id="having-trouble-generating-the-email-">Having Trouble Generating the Email?</h2>
+<p>If you&#39;re having trouble generating an email, you can looking your representative <a href="https://myreps.datamade.us/#/?results_level=federal">here</a>. Below is the text of email. You can paste the content of the email in your representative&#39;s contact form:</p>
+<p><strong>Subject: Constituent Demand - HELP DR. SAADEH&#39;S FAMILY</strong></p>
+<p>ADDRESS:</p>
+<p>I am writing to urgently bring to your attention a matter of utmost importance that requires immediate action. I came across this report on Fox 2 Detroit, <a href="https://www.fox2detroit.com/video/1376036">https://www.fox2detroit.com/video/1376036</a>.</p>
+<p>This is a horrific situation to be in. Dr. Yamaan Saadeh is a respected member of the Ann Arbor community and is currently embroiled in a harrowing situation as he endeavors to secure the safety and well-being of his family trapped in a conflict zone. Their lives are in peril, and swift intervention is crucial to prevent further tragedy.</p>
+<p>The situation on the ground in Gaza demands an IMMEDIATE ceasefire. The ongoing conflict has placed innocent civilians, including children and the elderly, in grave danger. Lives are being shattered, families torn apart, and the humanitarian crisis is escalating by the hour. It is imperative that steps be taken to halt the violence and ensure the safety of all individuals caught in this turmoil.</p>
+<p>As a constituent within your jurisdiction, I implore you to leverage your position and resources to extend a helping hand to Dr. Saadeh and his family. Your influence and connections can make a significant difference in facilitating their safe passage out of the conflict zone. Every moment is precious, and your prompt intervention can be the lifeline that these vulnerable individuals desperately need.</p>
+<p>I demand, as your constituent, that you take immediate action to reach out to relevant authorities, utilize diplomatic channels, and exhaust all available means to provide assistance and ensure the safe evacuation of Dr. Saadeh&#39;s family. Time is of the essence, and any delay in your intervention could have dire consequences.</p>
+<p>I urge you to act swiftly and decisively to bring about a ceasefire and to offer the necessary support and aid to evacuate innocent civilians from this conflict zone. The lives of Dr. Saadeh&#39;s family, along with countless others, depend on the urgency and efficacy of your response.</p>
+<p>I will be eagerly awaiting your prompt action and update on the measures taken to address this critical situation. Your leadership and intervention in this matter will not only reflect compassion and responsibility but will also serve as a beacon of hope for those trapped in unimaginable circumstances.</p>
+<p>Thank you for your immediate attention to this pressing matter. I trust that you will act with the urgency and empathy required to alleviate the suffering of innocent civilians.</p>
+<p>Sincerely,</p>
+
+</div>
